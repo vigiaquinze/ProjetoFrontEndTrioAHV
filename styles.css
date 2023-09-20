@@ -113,6 +113,10 @@ body{
     }
   }
 
+*, html {
+    scroll-behavior: smooth !important;
+}
+
 .index-text{
     font-family: "Schibsted Grotesk Regular";
     display: flex;

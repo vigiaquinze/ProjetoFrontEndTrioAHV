@@ -171,7 +171,7 @@ body{
 a{
     text-decoration: none;
     color: #050500;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 .projeto1{
     display: flex;

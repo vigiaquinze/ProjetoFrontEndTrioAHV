@@ -117,10 +117,6 @@ body{
     scroll-behavior: smooth !important;
 }
 
-#link1, #link2, #link3 {
-    overflow-y: scroll;
-}
-
 .index-text{
     font-family: "Schibsted Grotesk Regular";
     display: flex;

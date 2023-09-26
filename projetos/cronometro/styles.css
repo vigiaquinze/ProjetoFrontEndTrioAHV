@@ -47,11 +47,11 @@
 
 @keyframes pulse {
     0% {
-      color: #05050008;
+      letter-spacing: 0px;
     }
     50% {
-      transform: scale(1.4);
-      color: #05050081;
+      transform: scale(1.02);
+      letter-spacing: 3px;
     }
   }
 
@@ -168,9 +168,15 @@ p{
     transition: 0.5s;
 }
 
+.botoes button:hover{
+    border: none;
+    background-color: #003381;
+    color: #FFF;
+    transition: 0.5s;
+}
 .botoes button:active{
     border: none;
-    background-color: #000000c7;
+    background-color: #001535;
     color: #FFF;
     transition: 0.5s;
 }

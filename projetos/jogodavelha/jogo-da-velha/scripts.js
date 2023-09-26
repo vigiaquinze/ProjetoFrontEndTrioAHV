@@ -1,3 +1,4 @@
+/* variaveis */
 const cellElements = document.querySelectorAll("[data-cell]");
 const board = document.querySelector("[data-board]");
 const winningMessageTextElement = document.querySelector(
@@ -7,7 +8,7 @@ const winningMessage = document.querySelector("[data-winning-message]");
 const restartButton = document.querySelector("[data-restart-button]");
 
 let isCircleTurn;
-
+/* vetor com as combinações possiveis*/
 const winningCombinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -18,7 +19,7 @@ const winningCombinations = [
   [0, 4, 8],
   [2, 4, 6],
 ];
-
+/* variavel para inicial o jogo e para alterar de jogador a cada jogada e mostrar a mensagem de vitoria */
 const startGame = () => {
   isCircleTurn = false;
 
@@ -32,7 +33,7 @@ const startGame = () => {
   setBoardHoverClass();
   winningMessage.classList.remove("show-winning-message");
 };
-
+/* variavel para vitorias */
 const endGame = (isDraw) => {
   if (isDraw) {
     winningMessageTextElement.innerText = "Empate!";
@@ -58,11 +59,11 @@ const checkForDraw = () => {
     return cell.classList.contains("x") || cell.classList.contains("circle");
   });
 };
-
+/* variavel para os simbolos poderem serem colocados */
 const placeMark = (cell, classToAdd) => {
   cell.classList.add(classToAdd);
 };
-
+/* varivel para identifar de quem é a vez*/
 const setBoardHoverClass = () => {
   board.classList.remove("circle");
   board.classList.remove("x");
@@ -87,10 +88,10 @@ const handleClick = (e) => {
 
   placeMark(cell, classToAdd);
 
-  // Verificar por vitória
+
   const isWin = checkForWin(classToAdd);
 
-  // Verificar por empate
+
   const isDraw = checkForDraw();
 
   if (isWin) {

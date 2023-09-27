@@ -2,15 +2,15 @@
 // pega as variaveis e cria o iD
 const turnOn = document.getElementById('turnOn');
 const turnOff = document.getElementById('turnOff');
-const lamp = document.getElementById('lamp');
+const lamp = document.getElementById('lamp'); //img da lampada
 const rosa = document.getElementById('turnrosa');
 
 function isLampBroken() {
-    return lamp.src.indexOf('quebrada') > -1;
+    return lamp.src.indexOf('quebrada') > -1; //me retorna se esta quebrada
 }
 
 function lampOn() {
-    if (!isLampBroken()) {
+    if (!isLampBroken()) {//se não estiver quebrada
         lamp.src = './img/ligada.png';
         turnOn.src = './on/on.png';
         turnOff.src = './off/off.png'; // Atualiza a imagem do botão de desligar.
@@ -34,7 +34,7 @@ function lampRosa() {
 }
 
 function lampBroken() {
-    lamp.src = './img/quebrada.png';
+    lamp.src = './img/quebrada.png';//atualiza para quebrada
 }
 
 

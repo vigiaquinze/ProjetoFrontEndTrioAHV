@@ -1,5 +1,5 @@
 
-// pega as variaveis e cria o iD
+// pega as variaveis e da um nome a elas
 const turnOn = document.getElementById('turnOn');
 const turnOff = document.getElementById('turnOff');
 const lamp = document.getElementById('lamp');

@@ -2,48 +2,48 @@
 // pega as variaveis e da um nome a elas
 const turnOn = document.getElementById('turnOn');
 const turnOff = document.getElementById('turnOff');
-const lamp = document.getElementById('lamp');
+const luz = document.getElementById('luz');
 const rosa = document.getElementById('turnrosa');
 
 //isLampBroken define uma função
 // ">" operador de comparação
 function isLampBroken() {
-    return lamp.src.indexOf('quebrada') > -1;//retorna um valor boolean 
+    return luz.src.indexOf('quebrada') > -1;//retorna um valor boolean 
 }
 
-function lampOn() {
+function luzOn() {
     if (!isLampBroken()) {
-        lamp.src = './img/ligada.png';
+        luz.src = './img/ligada.png';
         turnOn.src = './on/on.png';
         turnOff.src = './off/off.png'; // Atualiza a imagem do botão de desligar.
     }
 }
 
-function lampOff() {
+function luzOff() {
     if (!isLampBroken()) {
-        lamp.src = './img/desligada.png';
+        luz.src = './img/desligada.png';
         turnOff.src = './off/off.png';
         turnOn.src = './on/on.png'; // Atualiza a imagem do botão de ligar.
     }
 }
 
-function lampRosa() {
+function luzRosa() {
     if (!isLampBroken()) {
-        lamp.src = './img/coz.rosa.png';
+        luz.src = './img/coz.rosa.png';
         turnOn.src = './on/on.png';
         turnrosa.src = './coz.rosa/coz.rosa.png'; // Atualiza a imagem do botão de ligar.
     }
 }
 
 function lampBroken() {
-    lamp.src = './img/quebrada.png'; //evento de alterar a lampada para quebrada
+    luz.src = './img/quebrada.png'; //evento de alterar a lampada para quebrada
 }
 
-turnOn.addEventListener('click', lampOn);
-turnOff.addEventListener('click', lampOff);
-turnrosa.addEventListener('click', lampRosa); //evento de cada botão
+turnOn.addEventListener('click', luzOn);
+turnOff.addEventListener('click', luzOff);
+turnrosa.addEventListener('click', luzRosa); //evento de cada botão
 
-lamp.addEventListener('mouseover', lampOn);
-lamp.addEventListener('mouseleave', lampOff);
-lamp.addEventListener('mouseover', lampRosa);
-lamp.addEventListener('dblclick', lampBroken); //ouvinte de evento a função que é chamada/ mais de um click
+luz.addEventListener('mouseover', luzOn);
+luz.addEventListener('mouseleave', luzOff);
+luz.addEventListener('mouseover', luzRosa);
+luz.addEventListener('dblclick', luzBroken); //ouvinte de evento a função que é chamada/ mais de um click

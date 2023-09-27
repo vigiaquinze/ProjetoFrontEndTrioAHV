@@ -1,10 +1,14 @@
-/* variaveis */
+//const que seleciona todas as celulas
 const cellElements = document.querySelectorAll("[data-cell]");
+//const com a borda
 const board = document.querySelector("[data-board]");
+//const com o paragrafo(p) da mensagem de vitoria
 const winningMessageTextElement = document.querySelector(
   "[data-winning-message-text]"
 );
+//const com a classe da mensagem de vitoria
 const winningMessage = document.querySelector("[data-winning-message]");
+//const com o botão de reiniciar
 const restartButton = document.querySelector("[data-restart-button]");
 
 let isCircleTurn;
@@ -19,10 +23,11 @@ const winningCombinations = [
   [0, 4, 8],
   [2, 4, 6],
 ];
-/* variavel para inicial o jogo e para alterar de jogador a cada jogada e mostrar a mensagem de vitoria */
+//variavel para que quando o jogo começar, não será a vez do circulo
 const startGame = () => {
   isCircleTurn = false;
 
+  //for dos simbolos
   for (const cell of cellElements) {
     cell.classList.remove("circle");
     cell.classList.remove("x");
@@ -33,7 +38,7 @@ const startGame = () => {
   setBoardHoverClass();
   winningMessage.classList.remove("show-winning-message");
 };
-/* variavel para vitorias */
+//const para quando o jogo empatar, aparecer a mensagem de empate, caso contraio apareca as mensagens repectivas de cada simbolo
 const endGame = (isDraw) => {
   if (isDraw) {
     winningMessageTextElement.innerText = "Empate!";
@@ -45,7 +50,7 @@ const endGame = (isDraw) => {
 
   winningMessage.classList.add("show-winning-message");
 };
-
+//const para ver as combinações de vitorias
 const checkForWin = (currentPlayer) => {
   return winningCombinations.some((combination) => {
     return combination.every((index) => {
@@ -53,36 +58,35 @@ const checkForWin = (currentPlayer) => {
     });
   });
 };
-
+//const para ver se há algum empate
 const checkForDraw = () => {
   return [...cellElements].every((cell) => {
     return cell.classList.contains("x") || cell.classList.contains("circle");
   });
 };
-/* variavel para os simbolos poderem serem colocados */
+//const para os simbolos poderem serem colocados
 const placeMark = (cell, classToAdd) => {
   cell.classList.add(classToAdd);
 };
-/* varivel para identifar de quem é a vez*/
+//const para não ser possivel colocar outro simbolo no mesmo lugar
 const setBoardHoverClass = () => {
   board.classList.remove("circle");
   board.classList.remove("x");
-
+//if para mudar os simbolos
   if (isCircleTurn) {
     board.classList.add("circle");
   } else {
     board.classList.add("x");
   }
 };
-
+//const para mudar a vez
 const swapTurns = () => {
   isCircleTurn = !isCircleTurn;
 
   setBoardHoverClass();
 };
-
+//adicinando os simbolos para o "click", as verificações de vitorias e mudar a vez
 const handleClick = (e) => {
-  // Colocar a marca (X ou Círculo)
   const cell = e.target;
   const classToAdd = isCircleTurn ? "circle" : "x";
 

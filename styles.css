@@ -155,7 +155,7 @@ body{
 .projetosLinks{
     font-family: "Schibsted Grotesk Regular";
     display: flex;
-    color: #050500;
+    color: #ffffff;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -185,7 +185,7 @@ a{
     align-items: center;
     align-content: center;
     flex-direction: column;
-    background-color: #eff5fa;
+    background-color: #4a70ac;
     scroll-behavior: smooth;
 }
 .projeto2{
@@ -196,7 +196,7 @@ a{
     align-items: center;
     align-content: center;
     flex-direction: column;
-    background-color: #d6dadd;
+    background-color: #2f476e;
     scroll-behavior: smooth;
 }
 .projeto3{
@@ -207,13 +207,13 @@ a{
     align-items: center;
     align-content: center;
     flex-direction: column;
-    background-color: #eff5fa;
+    background-color:#1e2633;
     scroll-behavior: smooth;
 }
 .projeto1 a{
     text-decoration: none;
     font-family: "Schibsted Grotesk Black";
-    background-color: #004ec5;
+    background-color: #00000091;
     color: #FFF;
     padding: 5px 10px;
     border-radius: 10px;
@@ -222,7 +222,7 @@ a{
 .projeto2 a{
     text-decoration: none;
     font-family: "Schibsted Grotesk Black";
-    background-color: #004ec5;
+    background-color: #00000091;
     color: #FFF;
     padding: 5px 10px;
     border-radius: 10px;
@@ -231,7 +231,7 @@ a{
 .projeto3 a{
     text-decoration: none;
     font-family: "Schibsted Grotesk Black";
-    background-color: #004ec5;
+    background-color: #00000091;
     color: #FFF;
     padding: 5px 10px;
     border-radius: 10px;
@@ -242,21 +242,21 @@ a{
     scale: 1.1;
     letter-spacing: 3px;
     transition: 0.5s;
-    background-color: #003380;
+    background-color: #00000048;
 }
 .projeto2 a:hover{
     text-decoration: none;
     scale: 1.1;
     letter-spacing: 3px;
     transition: 0.5s;
-    background-color: #003380;
+    background-color: #00000048;
 }
 .projeto3 a:hover{
     text-decoration: none;
     scale: 1.1;
     letter-spacing: 3px;
     transition: 0.5s;
-    background-color: #003380;
+    background-color: #00000048;
 }
 
 .fotoProjeto{

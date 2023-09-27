@@ -12,7 +12,7 @@ const winningMessage = document.querySelector("[data-winning-message]");
 const restartButton = document.querySelector("[data-restart-button]");
 
 let isCircleTurn;
-/* vetor com as combinações possiveis*/
+/* operador primario com as possibilidades de vitorias*/
 const winningCombinations = [
   [0, 1, 2],
   [3, 4, 5],
